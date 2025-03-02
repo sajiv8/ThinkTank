@@ -1,1 +1,49 @@
-Grey Code
+###  Grey Code
+
+📘 Gray Code in Computer Organization & Digital Design
+In my academics, I have a module called "Computer Organization and Digital Design."
+As part of this module, I need to learn about Gray Code and its conversion between Binary and Gray Code.
+
+In this post, I will explain:
+    ✅ What is Gray Code?
+    ✅ Why is it important?
+    ✅ How to convert between Binary and Gray Code?
+
+Let’s dive in! 🚀
+
+🌟 Gray Code & Its Conversion 🌟
+🔹 What is Gray Code?
+Gray Code is a special binary number system where only one bit changes between consecutive numbers. It is also known as Reflected Binary Code.
+
+🔹 Why is Gray Code Important?
+    ✅ Reduces Errors – Prevents errors in digital circuits by changing only one bit at a time.
+    ✅ Used in Digital Systems – Found in rotary encoders, communication systems, and error correction mechanisms.
+    ✅ Simplifies Hardware – Useful in counters & digital circuits for efficient processing.
+
+🔄 Binary to Gray Code Conversion
+📝 Steps to Convert Binary → Gray Code:
+1️⃣ First Gray bit = First Binary bit.
+2️⃣ Each next Gray bit = Previous Binary bit XOR Current Binary bit.
+
+✨ Example: Convert 1011 (Binary) → Gray Code
+
+1st Gray bit = 1 (Same as Binary MSB)  
+2nd Gray bit = 1 XOR 0 = 1  
+3rd Gray bit = 0 XOR 1 = 1  
+4th Gray bit = 1 XOR 1 = 0  
+🎯 Result: 1011 (Binary) → 1110 (Gray Code)
+
+🔄 Gray Code to Binary Conversion
+📝 Steps to Convert Gray Code → Binary:
+1️⃣ First Binary bit = First Gray bit.
+2️⃣ Each next Binary bit = Previous Binary bit XOR Current Gray bit.
+
+✨ Example: Convert 1110 (Gray Code) → Binary
+
+1st Binary bit = 1 (Same as Gray MSB)  
+2nd Binary bit = 1 XOR 1 = 0  
+3rd Binary bit = 0 XOR 1 = 1  
+4th Binary bit = 1 XOR 0 = 1  
+🎯 Result: 1110 (Gray Code) → 1011 (Binary)
+
+⚡ Gray Code is essential in digital systems to minimize errors and optimize performance! 🚀
