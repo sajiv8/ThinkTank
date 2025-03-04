@@ -1,5 +1,113 @@
 ### K Maps
+>>>>>>>>>>  K Maps Based on GreyCode
 
-K maps are used to simpify boolean expressions
-K Maps Based on GreyCode
+🔥 Karnaugh Map (K-Map) Tutorial – Complete Explanation 🚀
+K-Map is a graphical method used for simplifying Boolean expressions. Instead of using complex Boolean algebra, K-Maps make it easier to minimize logic functions. 💡
 
+✅ Why use K-Maps?
+
+Reduces Boolean expressions quickly ⏳
+Helps in digital circuit design ⚡
+Easy to visualize patterns 👀
+
+🛠️ 1. Basics of K-Maps
+A K-Map is a table-like structure that represents the truth table in a more visual way. Adjacent cells differ by only one bit (Gray Code ordering). 📊
+
+📏 Number of Variables & Cells
+
+🔢 Number of Variables	📦 Number of Cells
+2️⃣	4️ (2²)
+3️⃣	8️ (2³)
+4️⃣	16 (2⁴)
+5️⃣	32 (2⁵)
+6️⃣	64 (2⁶)
+
+🏗️ 2. K-Map Structure and Representation
+🎭 Gray Code Ordering
+Cells in a K-Map are arranged using Gray Code (so adjacent cells differ by one bit).
+
+🗺️ 2-Variable K-Map
+AB →	0️⃣	 1️⃣
+0️⃣	   0	  1
+1️⃣	   2	  3
+
+🗺️ 3-Variable K-Map
+AB ↓ / C →	0️⃣	  1️⃣
+00	         0	  1
+01           2	  3
+11	         6	  7
+10	         4  	5
+
+🗺️ 4-Variable K-Map
+AB ↓ / CD →	00	 01	 11 	10
+00	         0	 1	 3	 2
+01	         4	 5	 7	 6
+11	         12	 13	 15	 14
+10	         8	 9	 11	 10
+
+🎯 3. K-Map Simplification Rules
+    ✅ Rule 1: Grouping 1️⃣s (for SOP) or 0️⃣s (for POS)
+    
+        The goal is to group 1s (for Sum of Products - SOP) or 0s (for Product of Sums - POS).
+        Groups should be in powers of 2: 1, 2, 4, 8, etc. 🔢
+        Larger groups = simpler expression! 😍
+        Groups must be rectangular or square 📏
+
+    ✅ Rule 2: Wrapping is Allowed
+    
+        Edges wrap around like a torus (donut shape) 🍩
+        Top row connects to the bottom row
+        Leftmost column connects to the rightmost column
+
+    ✅ Rule 3: Writing the Expression
+
+        Each group gives a simplified Boolean term
+        Final equation is the sum (OR) of all groups
+
+✍️ 4. Example of K-Map Simplification
+🎲 Example 1: 3-Variable SOP Simplification
+Given Boolean function:
+
+F(A,B,C)=Σ(0,1,2,5,6,7)
+
+Step 1️⃣: Fill the K-Map 🗺️
+
+AB ↓ / C →	0️⃣	1️⃣
+00	         1	1
+01	         1	0
+11	         1	1
+10	         0	1
+
+Step 2️⃣: Grouping 🏗️
+
+Group (0,1,2) → Common term: A̅
+Group (5,7) → Common term: BC
+Group (6,7) → Common term: AB
+
+Step 3️⃣: Final Simplified Expression 🎯
+
+F = A̅ + BC + AB
+
+🎭 5. Don’t Care Conditions (X)
+
+    Sometimes, certain input combinations never occur. These are called don’t care conditions (X) ❓.
+    We can use them to simplify the function further by grouping them with 1s! 🎯
+    
+    📌 Example:
+    Given 
+    F(A,B,C,D)=Σ(0,2,5,7,8,10) with don’t cares at (12, 13), we include X while grouping to get a simpler equation.
+
+🔄 6. POS (Product of Sums) Simplification
+    Instead of grouping 1️⃣s, we group 0️⃣s and write the simplified expression in POS form.
+    
+    📌 Example:
+    Given 
+    F(A,B,C)=Π(1,3,4,6), we place 0s in those positions and simplify similarly! 😃
+
+
+🎓 7. Summary
+    🔹 K-Maps are an easy way to simplify Boolean expressions 🏗️
+    🔹 Grouping 1s (SOP) or 0s (POS) helps in simplification 🎯
+    🔹 Wrapping around edges is allowed 🔄
+    🔹 Don’t care conditions help in further reduction ❓
+    🔹 Larger groups → simpler expressions! 😍
